@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+    <title> DEMO </title>
+
+    <style>
+
+    </style>
+    <script src="/js/jquery.js"></script>
+</head>
+
+<body>
+    <div class='nav14'>测试菜单数据</div>
+
+    <div class='menuArea'>
+        <dl class='menuList'>
+
+        </dl>
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        var postUrl = 'http://fapitest.etong-online.com/api/hr/user/getMenuList.php?project_code=PJ201802040904&hr_code=14&token=a624097cd3367b03d92f701d016f3b31';
+        //发送ajax请求 ，基于jquery 
+        $.ajax({
+            url: postUrl,
+            type: 'GET',
+            dataType: 'json',
+            beforeSend: function () {
+                //发送请求前加载提示信息
+            },
+            success: function (res) {
+                var data = res.data.list;
+
+                var str = '';
+                $.each(data, function (key, val) {
+                    str += '<dt>';
+                    str += '	<a href="javascript:void(0);" class="append_manager" mid="">' + val.m_name + '</a>';
+                    str += '</dt>';
+                    str += '';
+                    str += '<dd class="left_menu_item_">';
+                    str += '	<ul>';
+                    $.each(val.menu_list, function (k, v) {
+                        str += '		<li>';
+                        str += '			<a href="javascript:void(0);" target="adminContentFrame">' + val.m_name + '</a>';
+                        str += '		</li>';
+                    });
+                    str += '	</ul>';
+                    str += '</dd>';
+                });
+
+                $(".menuList").append(str);
+
+
+            },
+            complete: function () {
+                //请求完成后的处理
+            },
+            error: function (XMLHttpRequest) {
+                //请求过程中发生了错误，记录下错误的代码 例如 : 404 => page not found
+                alert("请求遇到了错误 , 错误代码 : " + XMLHttpRequest.status);
+            }
+        });
+    });
+</script>
+
+
+
+
+
+
+
+真正的我的项目
+str += '<div id="pro-manage">';
+str += '		<i class="pro-manage-biao"></i>';
+str += '		<a href="javascript:;" class="pro-manage-title">项目管理</a>';
+str += '		<i class="add"></i>';
+str += '		<i class="sub"></i> ';
+str += '</div>';
+str += '<ul class="pro-contract-first">';
+str += '	<li><a href="javascript:;">合同管理</a><>';
+str += '   ';
+str += '</ul>';

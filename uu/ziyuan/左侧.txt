@@ -1,0 +1,34 @@
+  <!-- 左边固定栏 -->
+        <div class="left-side">
+                <div class="home-page">
+                        <i class="home-biao"></i>
+                        <a href="javascript:;" class="home-page-title">首页</a>
+                </div>
+                <div class="side-bar">
+                        <!-- <div class="pro-manage">
+                                <i class="pro-manage-biao"></i>
+                                <a href="javascript:;" class="pro-manage-title">项目管理</a>
+                                <i class="add"></i>
+                                <i class="sub"></i> 
+                        </div>
+                        <ul class="pro-contract-first">
+                            <li><a href="javascript:;">合同管理</a></li>
+                            <li class="pro-contract-tao">
+                                <a href="javascript:;"  class="pro-manage-title">项目套餐</a> 
+                                <ul class="pro-contract-second">    
+                                        <li><a href="javascript:;">套餐详情</a></li>
+                                        <li><a href="javascript:;">适用门店</a></li>
+                                        <li><a href="javascript:;">适用加项</a></li>
+                                        <li><a href="javascript:;">加项包详情</a></li>
+                                </ul>                        
+                            </li>
+                                            
+                            <li><a href="javascript:;">员工信息管理</a></li>
+                            <li><a href="javascript:;">三方通讯录</a></li>
+                            <li><a href="javascript:;">员工沟通材料</a></li>               
+                        </ul> -->
+                </div>
+              
+       
+   
+        </div>
